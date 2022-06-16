@@ -1,0 +1,66 @@
+  	Declare variaveis do tipo double: valor_digitado, valor_novo, diferenca, diferenca_arredondada
+        Declare variaveis do tipo inteiro: soma_moedas_inteiras = 0, soma_moedas_50 = 0, soma_moedas_25 = 0, soma_moedas_10 = 0, soma_moedas_05 = 0, soma_moedas_01 =0, soma_todas_moedas
+        Declare scanner com nome entrada
+
+        Escreva("Digite um valor")
+        Guarde o valor na variável valor_digitado
+        
+        Inicio se valor_digitado for um valor do tipo inteiro
+            Inicio para i de 0 até valor_digitado-1
+                Acrescente 1 na variavél soma_moedas_inteiras
+            Fim para
+            escreva("Numero de moedas " + soma_moedas_inteiras)
+        Fim se
+
+	Inicio senão se valor_digitado for um valor do tipo double 
+
+	Guarde na variável valor_novo o conteúdo da variável valor_digitado
+
+  	 // Conta o valor antes da virgula com moedas de 1 real
+          Inicio para i de 0 a valor_digitado-1
+             Acrescente 1 na variavél soma_moedas_inteiras;
+           Fim para
+
+           // Calcula a diferença 
+             Calcule e guarde a diferença na variavél diferenca que é igual a valor_digitado - valor_novo
+            
+                // Adiciona moeda de 50
+                Inicio enquanto a variável diferenca for maior ou igual a 0.50
+                    Acrescente 1 na variável soma_moedas_50
+		    Mude o conteúdo da variável valor_novo para valor_novo + 0.50
+		    Mude o conteúdo da variável diferenca para diferenca - 0.50
+                Fim enquanto
+
+                // Adiciona moeda de 25
+                Inicio enquanto a variável diferenca for maior ou igual a 0.25 e menor que 0.50
+                    Acrescente 1 na variável soma_moedas_25
+ 	            Mude o conteúdo da variável valor_novo para valor_novo + 0.25
+		    Mude o conteúdo da variável diferenca para diferenca - 0.25
+                Fim enquanto
+
+		// Adiciona moeda de 10
+                Inicio enquanto a variável diferenca for maior ou igual a 0.10 e menor que 0.25
+                    Acrescente 1 na variável soma_moedas_10
+ 		    Mude o conteúdo da variável valor_novo para valor_novo + 0.10
+		    Mude o conteúdo da variável diferenca para diferenca - 0.10
+                Fim enquanto
+
+
+		// Adiciona moeda de 05
+                Inicio enquanto a variável diferenca for maior ou igual a 0.05 e menor que 0.10
+                    Acrescente 1 na variável soma_moedas_05
+ 		    Mude o conteúdo da variável valor_novo para valor_novo + 0.05
+		    Mude o conteúdo da variável diferenca para diferenca - 0.05
+                Fim enquanto
+
+		// Adiciona moeda de 01
+                Inicio enquanto a variável diferenca for maior ou igual a 0.001 e menor que 0.05
+                    Acrescente 1 na variável soma_moedas_01
+                    Mude o conteúdo da variável valor_novo para valor_novo + 0.01
+		    Mude o conteúdo da variável diferenca para diferenca - 0.01
+                Fim enquanto
+
+            // Contabiliza o total de moedas utilizadas 
+            Guarde na variavel soma_todas_moedas a soma das variáveis soma_moedas_inteiras + soma_moedas_50 + soma_moedas_25 + soma_moedas_10 + soma_moedas_05 + soma_moedas_01
+            Escreva("\nO mínimo de moedas para este valor é de " + soma_todas_moedas + " moedas\n")
+        Fim senão se

@@ -1,0 +1,22 @@
+-- A pasta "01 - Teste" -- (resultado parcial)
+
+* Contém um código em Java (feito no VSCode) com diversos println durante a execução do código, para melhor 
+entendimento do que estava acontencendo em cada etapa do código;
+
+* Contém o código em um arquivo txt caso o código da pasta não rode por ter sido feito no VSCode;
+
+* Contém o print do resultado quando executado o código e digitado um valor.
+
+
+
+-- A pasta "02 - Final" -- (resultado final) ~ Levar esta em consideração para a nota
+
+* Contém um código em Java (feito no VSCode) com somente uma saída, como pedido no enunciado;
+
+* Contém o código em um arquivo txt caso o código da pasta não rode por ter sido feito no VSCode;
+
+* Contém o algoritmo em um arquivo txt;
+
+* Contém o print do resultado quando executado o código e digitado um valor.
+
+

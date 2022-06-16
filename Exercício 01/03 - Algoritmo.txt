@@ -1,0 +1,30 @@
+
+        Declare variáveis do tipo double: credito_especial, saldo_medio
+        Declare um scanner 
+       
+        Escreva("Digite o saldo medio do ultimo ano")
+        Guarde o valor na variável saldo_medio 
+
+       Início se saldo_medio for menor ou igual a 200
+	    Calcule e guarde na variável credito_especial a conta de saldo_medio vezes 0.10
+            Escreva("Ate R$ 200,00 o crédito sera 10% do saldo médio")
+            Escreva("Dessa forma o valor do credito especial e de R$ " + credito_especial)
+	Fim se
+
+        Início senão se saldo_medio for maior que 200 e saldo_medio for menor ou igual a 300 
+            Calcule e guarde na variável credito_especial a conta de saldo_medio vezes 0.20;
+            Escreva("Maior que R$ 200,00 e menor igual a R$300,00 sera 20% do saldo médio")
+            Escreva("Dessa forma o valor do credito especial e de R$ " + credito_especial)
+	Fim senão se
+
+        Início senão se saldo_medio for maior que 300 e saldo_medio for menor ou igual a 400)
+            Calcule e guarde na variável credito_especial a conta de saldo_medio vezes 0.25
+            Escreva("Maior que R$ 300,00 e menor igual a R$400,00 sera 25% do saldo médio")
+            Escreva("Dessa forma o valor do credito especial e de R$ " + credito_especial)
+	Fim senão se
+
+        Início senão
+            Calcule e guarde na variável credito_especial a conta de saldo_medio vezes 0.30
+            Escreva("Acima de R$ 400,00 sera 30% do saldo médio")
+            Escreva("Dessa forma o valor do credito especial e de R$ " + credito_especial)
+        Fim senão

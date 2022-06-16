@@ -1,0 +1,3 @@
+Na imagem "04 - Terminal" não coube todos os testes, estão somente alguns para mostrar que o código funciona
+
+Mas todas as condições foram feitas e podem ser conferidas por você atráves do código

@@ -1,0 +1,37 @@
+
+        Declare variáveis do tipo double: idade, peso
+        Declare scanner 
+
+        Escreva("Digite a idade do paciente ")
+        Guarde o valor na variável idade
+
+        Escreva("Digite o peso do paciente ")
+        Guarde o valor na variável peso
+
+        Início se idade for maior ou igual a 12 e peso for maior ou igual a 60 
+            Escreva("Adultos ou adolescentes desde 12 anos, inclusive, se tiverem peso igual ou acima de 60 kg devem tomar 1000 mg.")
+        Sim se
+
+        Início senão se idade for maior ou igual a 12 e peso for menor que 60
+            Escreva("Adultos ou adolescentes desde 12 anos, inclusive, se tiverem peso abaixo de 60 kg devem tomar 875 mg.");
+        Fim senão se
+
+        Início senão se idade for menor que 12 e peso for maior ou igual a 5 e peso for menor ou igual a 9) 
+            Escreva("Crianças e adolescentes abaixo de 12 anos e com peso entre 5 kg e 9 kg devem tomar 125 mg.");
+        Fim senão se
+
+        Início senão se idade for menor que 12 e peso for maior ou igual 9.1 e peso for menor ou igual a 16) 
+            Escreva("Crianças e adolescentes abaixo de 12 anos e com peso entre 9.1 kg e 16 kg devem tomar 250 mg.");
+        Fim senão se
+
+        Início senão se idade for menor que 12 e peso for maior ou igual 16.1 e peso for menor ou igual a 24) 
+            Escreva("Crianças e adolescentes abaixo de 12 anos e com peso entre 16.1 kg e 24 kg devem tomar 375 mg.");
+        Fim senão se
+
+        Início senão se idade for menor que 12 && e peso for maior ou igual 24.1 e peso for menor ou igual a 30) 
+            Escreva("Crianças e adolescentes abaixo de 12 anos e com peso entre 24.1 kg e 30 kg devem tomar 500 mg.");
+        Fim senão se
+
+        Início senão
+            Escreva("Crianças e adolescentes abaixo de 12 anos e com peso acima de 30 kg devem tomar 750 mg.");
+        Fim senão

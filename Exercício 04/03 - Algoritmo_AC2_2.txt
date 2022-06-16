@@ -1,0 +1,213 @@
+        Declare variáveis do tipo inteiro: num_tab, num_excesso_a, num_excesso_b, num_excesso_c
+        Declare variáveis do tipo inteiro: armadilha_1, armadilha_2, armadilha_3
+        Declare variáveis do tipo inteiro e sendo um vetor: dado[8], soma_dados
+        Declare variáveis do tipo inteiro: jogador_a = 0, jogador_b = 0, jogador_c = 0
+        Declare variáveis do tipo inteiro: jogar_dado_a, jogar_dado_b, jogar_dado_c
+        Declare variáveis do tipo inteiro: op_rod = 0
+        Declare scanner 
+
+        Escreva("Digite o numero de quadrados na trilha")
+        Guarde o valor digitado na variável num_tab 
+        Escreva("Digite a posiçoes das 3 armadilhas")
+        Escreva("Posiçao da armadilha 1 (de 1 até o numero de quadrados digitado anteriormente)")
+        Guarde o valor digitado na variável armadilha_1
+        Escreva("Posiçao da armadilha 2 (de 1 até o numero de quadrados digitado anteriormente)")
+        Guarde o valor digitado na variável armadilha_2
+        Escreva("Posiçao da armadilha 3 (de 1 até o numero de quadrados digitado anteriormente)")
+        Guarde o valor digitado na variável armadilha_3
+
+        Faça
+        // Jogador A
+        Escreva("| Jogador A |")
+        Escreva("Digite 1 para jogar o dado")
+        Guarde o valor digitado na variável jogar_dado_a
+
+        Início se (jogar_dado_a for igual a 1)
+            Gere numeros aleatório usando o método Random Random gerador = new Random() // gera os numeros aleatorios dos 2 dados
+
+            Início para (para i de 1 a 2 incrementando de 1 em 1) {
+                Gere numeros aleatórios de 1 a 6 
+                Escreva("Numero dos dados")
+            Fim para
+
+            Guarde os valores dos dados na variável soma_dados 
+            Escreva("Jogador A deve andar " + soma_dados + " quadrados")
+            
+
+            jogador_a = jogador_a + soma_dados
+
+            // VerInício seica Início se o jogador caiu numa armadilha
+            Início se (jogador_a for igual a armadilha_1 ou jogador_a for igual a armadilha_2 ou jogador_a for igual a armadilha_3 )
+                Escreva("Jogador A caiu numa armadilha e deve voltar 2 quadrados")
+                Escreva("Jogador A estava no quadrado " + jogador_a + " quando caiu na armadilha")
+                Guarde na variável jogador_a o valor de jogador_a - 2
+                Escreva("Jogador A esta no quadrado " + jogador_a + " depois de cair na armadilha" )
+                Guarde na variável soma_dados o valor 0
+                
+            Fim se 
+
+            Início senão
+                Escreva("Jogador A esta no quadrado " + jogador_a)
+                soma_dados = 0
+            Fim senão
+           
+            // VerInício seica Início se o jogador tirou numero maior que a ultima posição do tabuleiro
+            Início se (jogador_a for maior que num_tab)
+                Guarde na variável num_excesso_a o valor de jogador_a - num_tab
+                Guarde na variável jogador_a o valor de (jogador_a - num_excesso_a) - num_excesso_a
+                Escreva("Jogador A excedeu o número limite do tabuleiro")
+                Escreva("Jogador A voltará o excedente do limite (" + num_excesso_a + " quadrados a partir do ultimo quadrado)")
+                Escreva("Jogador A esta no quadrado " + jogador_a)
+                
+                Guarde na variável soma_dados o valor 0
+                
+                // VerInício seica Início se o jogador caiu numa armadilha depois de voltar os quadrados em excesso
+                Início se (jogador_a for igual a armadilha_1 ou jogador_a for igual a armadilha_2 ou jogador_a for igual a armadilha_3 )
+                    Escreva("Jogador A caiu numa armadilha e deve voltar 2 quadrados")
+                    Escreva("Jogador A estava no quadrado " + jogador_a + " quando caiu na armadilha")
+                    Guarde na variável jogador_a o valor jogador_a - 2
+                    Escreva("Jogador A esta no quadrado " + jogador_a + " depois de cair na armadilha" )
+                    Guarde na variável soma_dados o valor 0
+                Fim se
+            Fim se 
+        Fim se
+        
+        
+
+        // Jogador B
+        Escreva("| Jogador B |")
+        Escreva("Digite 1 para jogar o dado")
+        Guarde o valor digitado na variável jogar_dado_b
+
+        Início se (jogar_dado_b for igual a 1)
+            Gere numeros aleatório usando o método Random Random gerador = new Random() // gera os numeros aleatorios dos 2 dados
+
+            Início para (para i de 1 a 2 incrementando de 1 em 1) {
+                Gere numeros aleatórios de 1 a 6 
+                Escreva("Numero dos dados")
+            Fim para
+
+            Guarde os valores dos dados na variável soma_dados 
+            Escreva("Jogador B deve andar " + soma_dados + " quadrados")
+            
+
+            jogador_b = jogador_b + soma_dados
+
+            // VerInício seica Início se o jogador caiu numa armadilha
+            Início se (jogador_b for igual a armadilha_1 ou jogador_b for igual a armadilha_2 ou jogador_b for igual a armadilha_3 )
+                Escreva("Jogador B caiu numa armadilha e deve voltar 2 quadrados")
+                Escreva("Jogador B estava no quadrado " + jogador_b + " quando caiu na armadilha")
+                Guarde na variável jogador_b o valor de jogador_b - 2
+                Escreva("Jogador B esta no quadrado " + jogador_b + " depois de cair na armadilha" )
+                Guarde na variável soma_dados o valor 0
+                
+            Fim se 
+
+            Início senão
+                Escreva("Jogador B esta no quadrado " + jogador_b)
+                soma_dados = 0
+            Fim senão
+           
+            // VerInício seica Início se o jogador tirou numero maior que a ultima posição do tabuleiro
+            Início se (jogador_b for maior que num_tab)
+                Guarde na variável num_excesso_b o valor de jogador_b - num_tab
+                Guarde na variável jogador_b o valor de (jogador_b - num_excesso_b) - num_excesso_b
+                Escreva("Jogador B excedeu o número limite do tabuleiro")
+                Escreva("Jogador B voltará o excedente do limite (" + num_excesso_b + " quadrados a partir do ultimo quadrado)")
+                Escreva("Jogador B esta no quadrado " + jogador_b)
+                
+                Guarde na variável soma_dados o valor 0
+                
+                // VerInício seica Início se o jogador caiu numa armadilha depois de voltar os quadrados em excesso
+                Início se (jogador_b for igual a armadilha_1 ou jogador_b for igual a armadilha_2 ou jogador_b for igual a armadilha_3 )
+                    Escreva("Jogador B caiu numa armadilha e deve voltar 2 quadrados")
+                    Escreva("Jogador B estava no quadrado " + jogador_b + " quando caiu na armadilha")
+                    Guarde na variável jogador_b o valor jogador_b - 2
+                    Escreva("Jogador B esta no quadrado " + jogador_b + " depois de cair na armadilha" )
+                    Guarde na variável soma_dados o valor 0
+                Fim se
+            Fim se 
+        Fim se
+
+        // Jogador C
+        Escreva("| Jogador C |")
+        Escreva("Digite 1 para jogar o dado")
+        Guarde o valor digitado na variável jogar_dado_c
+
+        Início se (jogar_dado_c for igual a 1)
+            Gere numeros aleatório usando o método Random Random gerador = new Random() // gera os numeros aleatorios dos 2 dados
+
+            Início para (para i de 1 a 2 incrementando de 1 em 1) {
+                Gere numeros aleatórios de 1 a 6 
+                Escreva("Numero dos dados")
+            Fim para
+
+            Guarde os valores dos dados na variável soma_dados 
+            Escreva("Jogador C deve andar " + soma_dados + " quadrados")
+            
+
+            jogador_c = jogador_c + soma_dados
+
+            // VerInício seica Início se o jogador caiu numa armadilha
+            Início se (jogador_c for igual a armadilha_1 ou jogador_c for igual a armadilha_2 ou jogador_c for igual a armadilha_3 )
+                Escreva("Jogador C caiu numa armadilha e deve voltar 2 quadrados")
+                Escreva("Jogador C estava no quadrado " + jogador_c + " quando caiu na armadilha")
+                Guarde na variável jogador_c o valor de jogador_c - 2
+                Escreva("Jogador C esta no quadrado " + jogador_c + " depois de cair na armadilha" )
+                Guarde na variável soma_dados o valor 0
+                
+            Fim se 
+
+            Início senão
+                Escreva("Jogador C esta no quadrado " + jogador_c)
+                soma_dados = 0
+            Fim senão
+           
+            // VerInício seica Início se o jogador tirou numero maior que a ultima posição do tabuleiro
+            Início se (jogador_c for maior que num_tab)
+                Guarde na variável num_excesso_c o valor de jogador_c - num_tab
+                Guarde na variável jogador_b o valor de (jogador_b - num_excesso_c) - num_excesso_c
+                Escreva("Jogador C excedeu o número limite do tabuleiro")
+                Escreva("Jogador C voltará o excedente do limite (" + num_excesso_c + " quadrados a partir do ultimo quadrado)")
+                Escreva("Jogador C esta no quadrado " + jogador_c)
+                
+                Guarde na variável soma_dados o valor 0
+                
+                // VerInício seica Início se o jogador caiu numa armadilha depois de voltar os quadrados em excesso
+                Início se (jogador_c for igual a armadilha_1 ou jogador_c for igual a armadilha_2 ou jogador_c for igual a armadilha_3 )
+                    Escreva("Jogador C caiu numa armadilha e deve voltar 2 quadrados")
+                    Escreva("Jogador C estava no quadrado " + jogador_c + " quando caiu na armadilha")
+                    Guarde na variável jogador_c o valor jogador_c - 2
+                    Escreva("Jogador C esta no quadrado " + jogador_c + " depois de cair na armadilha" )
+                    Guarde na variável soma_dados o valor 0
+                Fim se
+            Fim se 
+        Fim se
+
+        Início se (jogador_a for igual a num_tab ou jogador_b for igual a num_tab ou jogador_c for igual a num_tab){
+            Escreva("Um dos jogadores chegou no quadrado final e venceu o jogo")
+            Escreva("Aperte 2 para ver quem foi o vencedor")
+            Guarde o valor digitado na variável op_rod
+        Fim se
+
+        Início senão {
+            Escreva("Fim da rodada")
+            Escreva("Aperte 1 para iniciar outra rodada")
+            Guarde o valor digitado na variável op_rod 
+        Fim senão
+
+        Enquanto (op_rod for igual a 1)
+
+        Escreva("- Vencedor -")
+        
+        Início se (jogador_a for maior que jogador_b ou jogador_a for maior que jogador_c)
+            Escreva("Jogador A venceu")
+        Fim se
+
+        Início senão se(jogador_b for maior que jogador_a ou jogador_b for maior que jogador_c){
+            Escreva("Jogador B venceu")
+        Fim senão se
+
+        Início senão {
+            Escreva("Jogador C venceu")
+        Fim senão
